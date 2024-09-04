@@ -4,30 +4,41 @@
 
 # Dev
 
-1. Clonar el proyecto
-2. Copiar el `.env.template` y renombrar a `.env`
-3. Ejecutar
+## Ejecución con Docker
 
-```
-npm install
-```
+1. Asegúrate de estar en la carpeta del backend dentro del repositorio.
+2. Copiar el `.env.template` y renombrar a `.env`.
+3. Levantar la imagen (Docker Desktop).
 
-4. Levantar la imagen (Docker Desktop)
+   ```bash
+   docker-compose up -d
+   ```
 
-**Nota:** Si no tienes Docker, asegúrate de tener PostgreSQL instalado en tu equipo.
+4. Visitar el sitio.
 
-```
-docker-compose up -d
-```
+   ```
+   http://localhost:<PUERTO_ESPECIFICADO_EN_EL_ENV>
+   ```
 
-5. Levantar el backend de Nest
+## Ejecución Local
 
-```
-npm start:dev
-```
+1. Asegúrate de estar en la carpeta del backend dentro del repositorio.
+2. Copiar el `.env.template` y renombrar a `.env`.
+3. Verificar que PostgreSQL esté funcionando en tu equipo.
+4. Ejecutar:
 
-6. Visitar el sitio
+   ```bash
+   npm install
+   ```
 
-```
-http://localhost:<PUERTO_ESPECIFICADO_EN_EL_ENV>
-```
+5. Levantar el backend de Nest.
+
+   ```bash
+   npm run start:dev
+   ```
+
+6. Visitar el sitio.
+
+   ```
+   http://localhost:<PUERTO_ESPECIFICADO_EN_EL_ENV>
+   ```
